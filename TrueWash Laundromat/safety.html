@@ -1,0 +1,461 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+         .icons{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            margin: -8px;
+            margin-bottom: 0px;
+            gap: 40%;
+        }
+         .icon-btn{
+                cursor: pointer;
+                background-color: rgb(0, 0, 0,);
+                transition: bachground-color 0.3s ease;
+             }
+             .icon-btn:hover{
+                background-color: rgba(82, 81, 81, 0.7);
+             }
+             .icon-btn:active{
+                  background-color: rgba(82, 81, 81, 0.7);
+             }
+
+             .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+              .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+             .info p:hover{
+                color: white;
+             }
+             .info a{
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list div{
+                cursor: pointer;
+                transition: color 0.3s ease;
+               
+             }
+             .footer-list a{
+                 text-decoration: none;
+                color: inherit;
+             }
+             .footer-list div:hover{
+                 color:rgb(255, 174, 0) ;
+             }
+             .readMoreBtn{
+                cursor: pointer;
+                transition: color background-color 0.3s ease;
+                color: black;
+                text-decoration: none;
+             }
+             .readMoreBtn:hover{
+                color: white;
+                background-color: black;
+             }
+        
+
+        .social-icon{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            margin: 8px;
+            gap: 0px;
+        }
+
+        .icon-notifications{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 0px;
+            margin-left: 100px;
+        }
+
+        .header-info{
+            height: 100%;
+            background-color: rgb(255, 174, 0);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+        .header-info div{
+          flex: 1 1 45%;
+          height: 15vh;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          margin-right: 10px;
+        }
+
+        .logo img{
+            width: 200px;
+            margin-top: 30px;
+            padding: 0;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+       .social-icon img{
+            height: 30px;
+            margin-right: 10px;}
+
+             .icon-notifications button{
+            width: 100px;
+            height: 50px;
+            color: antiquewhite;
+            background-color: black;
+            border-style: none;
+             }
+
+
+             .safety-intro img{
+                height: 13vh;
+                background-color: blue;
+             }
+             .safety{
+                margin: 4%;
+                 border: solid 4px rgb(255, 174, 0);
+                 padding: 4%;
+                 font-size: 20px;
+             }
+             .safety-intro{
+                display: grid;
+                justify-items: center;
+                align-items: center;
+             }
+             .Safety-list{
+                margin: 30px;
+                padding: 5%px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6%;
+                margin-bottom: 200px;
+                margin-top: 9%;
+             }
+             .Safety-list div{
+                padding: 6%;
+                background-color: rgba(219, 216, 216, 0.5);;
+             }
+
+
+
+     
+
+
+      
+        .Number{
+            background-color: black;
+            display: grid;
+            color: white;
+            font-size: large;
+            font-weight: 600;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70%;
+            justify-content: end;
+            height: 30%;
+            padding: 22px;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .lower-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: rgb(255, 174, 0);
+            height: 130px;
+            gap: 20%;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .logo1 img{
+             width: 200px;
+            margin: 25px;
+        }
+
+        .lower-button button{
+            margin: 5%;
+            width: 170px;
+            max-width: 200%;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+        
+           .bookBtn{
+            background-color: black; 
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .bookBtn:hover{
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer{
+            margin: 10px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        .footer-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        .footer-right{
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <div class="icons">
+
+   <div class="social-icon">
+
+        <div>
+            <img src="19281bb86d83975cddeccdf56ec7e441.jpg" style="height: 18px; margin-top: 3px;margin-right: 0px;">
+        </div>
+        <div>
+            <img src="images (1).png">
+        </div>
+          <div>
+            <img src="images (2).png">
+          </div>
+            <div>
+                <img src="instagram-logo-white-circle-outline-icon-ig-app-vector-56237085.avif">
+            </div>
+
+      </div>
+
+  <div class="icon-notifications">
+          <a href="FAQS.html">
+            <button class="icon-btn">FAQs</button>
+        </a>
+           <a href="safety.html">
+             <button class="icon-btn">Safety Policy</button>
+           </a>
+        
+        <a href="privacy.html">
+            <button class="icon-btn">Privacy Policy</button>
+        </a>
+        <a href="contact.html">
+            <button class="icon-btn">Contact Us</button>
+        </a>
+          
+    </div>
+
+  </div>
+
+  <div class="header-info">
+    <div class="logo">
+        <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+    </div>
+<div class="info" style="font-size: larger;">
+        <a href="index.html"  rel="noopener noreferrer"><p>Home</p></a>
+          <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+           <a href="About.html">
+             <p>About Us - Trusted Laundromart -True Wash Laundromart, Akoka Lagos</p>
+           </a>
+           <a href="news.html">
+                          <p> News</p>
+           </a>
+    </div>
+    <div class="header-name">
+  <h1>Safety Policy</h1>
+</div>
+  </div>
+
+   
+
+    <div class="safety">
+          <div class="safety-intro">
+            <img src="safety image.png">
+            <h2>TrueWash Laundromart Safety Policy</h2>
+            <h4>Introduction</h4>
+            <P>TrueWash Laundromart is comitted to providing a safe and secure environment for our customers and employees. We have implemented this safety policy to help prevent accident and injuries</P>
+                <h4>General Safety Rules</h4>
+        </div>
+              <div class="safety-introList">
+                <ul>
+                    <li>Please follow all instructions Posted on machines and signs throughout the Laundromart.</li>
+                    <li>Do not overload Machines.</li>
+                      <li>Do not leave children unattended to in the Laundromart.</li>
+                    <li>Report any hazards or unsafe conditions to a staff member immediately.</li>
+                </ul>
+              </div>
+
+          <div class="Safety-list">
+              <div>
+                <h4>Machine Safety</h4>
+                <ul>
+                    <li> Do not use machines that are malfunctioning or appear damaged</li>
+                  <li>Do not touch the inside of a washing machine while it is in operation.</li>
+                    <li>Do not leave flammable materials near the machines.</li>
+                  <li>Keep children away from machines while they are in operation.</li>
+                </ul>
+              </div>
+
+                  <div>
+                    <H4>Chemical Safety</H4>
+                    <ul>
+                        <li>Read and follow all instructions on laundry detergents and fabric softners.</li>
+                         <li>Do not mix chemicals.</li>
+                          <li>Keep chemicals out of reach of childrens.</li>
+                    </ul>
+                  </div>
+
+                      <div>
+                        <h4>Fire Safety</h4>
+                          <ul>
+                        <li>Do not smoke or use open flames inside the laundromart.</li>
+                         <li>Do mot use appliances that are not approved for use in the laundromart.</li>
+                          <li>Report any fires immediately to a staff member and call 0800377757077</li>
+                    </ul>
+                      </div>
+
+                          <div>
+                            <h4>Training</h4>
+                            <p>All staff members will be trained on the safety policy and procedures. Thos training will include:</p>
+                              <ul>
+                        <li>Fire safety</li>
+                         <li>Chemical Safety</li>
+                          <li>Machine Safety</li>
+                           <li>Emergency Procedures</li>
+                    </ul>
+                          </div>
+
+                           <div>
+                            <h4>Employees Safety</h4>
+                            <p>Employess must wear appropirate personal protective equipment (PPE) when handling chemiclas.</p>
+                              <ul>
+                        <li>Employees must be trained on the safe operation of all machines. </li>
+                         <li>Employees must report any unsafe conditions to their supervisor immediately.</li>
+                    </ul>
+                           </div>
+
+                  <div>
+                    <h4>Enforcement</h4>
+                    <P>TrueWash laundromart will take appropirate disciplinary action againist any employee who violates the saftey policy.</P>
+                  <P>Contact information</P>
+                  <P>If you have any questions or concerns about safety, please contact a staff member or call 080379057079 </P>
+                <P>Thank you for your cooperation in making TrueWash Laundromart a safe and enjoyable place for everyone.</P>
+                </div>
+
+          </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+ <div class="Number">
+        <div style="color: rgb(255, 174, 0);">Talk To Us Now</div>
+        <div>+2348037905770</div>
+    </div>
+
+    <div class="lower-section">
+        <div class="logo1">
+            <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+        </div>
+        <div class="lower-button">
+            <button class="readMoreBtn" data-page="contact.html">Chat With Us</button>
+             <a href="contact.html">
+                <button class="bookBtn">Book An Appointment</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-list">
+             <div>
+                  <a href="index.html" rel="noopener noreferrer" ><p>Home</p></a>
+             </div>
+         <div>
+              <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+         </div>
+          <div >About Us-Trusted Laundromart-Truewash laundromart, Akoka Lagos</div>
+              
+          <a href="news.html">
+                <div>News</div>
+              </a>
+
+              <a href="FAQS.html" rel="noopener noreferrer"> 
+                <div>FAQs</div>
+            </a>
+
+                <a href="safety.html" rel="noopener noreferrer">
+                    <div style="color: rgb(255, 174, 0)">Safety Policy</div>
+                </a>
+                 
+                <a href="privacy.html" rel="noopener noreferrer">
+                     <div >Privacy Policy</div>
+                </a>
+                    <a href="contact.html" rel="noopener noreferrer">
+                           <div>Contact Us</div>
+                    </a>
+
+                   <div>Like us on Facebook</div>
+                     <div> Follow Us On Instagram</div>
+
+        </div>
+
+        <div class="footer-right">
+            @Copyright 2025| Truewash Greenpathsdev| All Rights Reserved
+        </div>
+        
+    </div>
+          
+    <script>
+        document.querySelectorAll(".readMoreBtn").forEach(
+            btn => {
+                btn.addEventListener( "click",
+                    () =>{
+                        window.location.href = btn.getAttribute("data-page");
+                    } );
+            }
+        );
+    </script>
+
+
+
+</body>
+
+
+
+</html>

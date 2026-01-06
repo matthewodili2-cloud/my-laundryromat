@@ -1,0 +1,638 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+
+    <style>
+      body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        font-size: 21px;
+      }
+         .icons{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            margin: -8px;
+            margin-bottom: 0px;
+            gap: 40%;
+        }
+        
+
+         .icon-btn{
+                cursor: pointer;
+                background-color: rgb(0, 0, 0,);
+                transition: bachground-color 0.3s ease;
+             }
+             .icon-btn:hover{
+                background-color: rgba(82, 81, 81, 0.7);
+             }
+             .icon-btn:active{
+                  background-color: rgba(82, 81, 81, 0.7);
+             }
+
+             .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+              .info a{
+                text-decoration: none;
+                color: inherit;}
+
+             .info p:hover{
+                color: white;
+             }
+             .footer-list div{
+                cursor: pointer;
+                transition: color 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list a{
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list div:hover{
+                 color:rgb(255, 174, 0) ;
+             }
+             .readMoreBtn{
+                cursor: pointer;
+                transition: color background-color 0.3s ease;
+                color: black;
+                text-decoration: none;
+             }
+             .readMoreBtn:hover{
+                color: white;
+                background-color: black;
+             }
+             .readContact{
+                background-color:white ;
+             }
+        
+
+        .social-icon{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            margin: 8px;
+            gap: 0px;
+        }
+
+        .icon-notifications{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 0px;
+            margin-left: 100px;
+        }
+
+        .header-info{
+            height: 100%;
+            background-color: rgb(255, 174, 0);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+        .header-info div{
+          flex: 1 1 45%;
+          height: 15vh;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          margin-right: 10px;
+        }
+
+        .logo img{
+            width: 200px;
+            margin-top: 30px;
+            padding: 0;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+       .social-icon img{
+            height: 30px;
+            margin-right: 10px;}
+
+             .icon-notifications button{
+            width: 100px;
+            height: 50px;
+            color: antiquewhite;
+            background-color: black;
+            border-style: none;
+             }
+
+
+             .news-heading {
+                display: grid;
+                justify-items: flex-start;
+                align-items: flex-start;
+                 margin-left: 2%;
+             }
+             .news-headingBtn{
+                display: grid;
+                justify-items: end;
+                align-items: end;
+                margin: 2%;
+                margin-top: -7px;
+                height: 45px;
+                margin-bottom: 0;
+             }
+             .news-headingBtn button{
+                width: 20%;
+                height: 45px;
+                font-size: 15px;
+             }
+
+             .news-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 5%;
+                gap: 2%;
+                margin:3%;
+                margin-bottom: 8%;
+             }
+
+             .News-list{
+                border: 2px solid rgb(105, 105, 105);
+                display: grid;
+                grid-template-rows: repeat(1, 1fr);
+                justify-items: center;
+                align-items: center;
+                padding: 4%;
+                padding-right: 25px;
+                gap: 50px;
+             }
+     
+             .newsImg img {
+                height: 55vh;
+                margin: 2%;
+                width: 100%;
+             }
+
+             button{
+                  background-color: rgb(255, 174, 0);
+                  border: none;
+                  width: 110px;
+                  height: 50px;
+                  border-radius: 30px;
+                  font-weight: bold;
+             }
+
+             .newsHead p{
+                font-size: medium;
+                color: darkgray;
+             }
+
+             .main{
+                display: grid;
+                margin: 3%;
+                justify-items: center;
+                align-items: center;
+             }
+             .faqHead, .faqImgHead{
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                margin-top: 3%;
+             }
+
+                .faqOpt{
+                display: grid;
+                width: 100%;
+                margin-bottom: 5%;
+                justify-content: space-between;
+                align-content: space-between ;
+                grid-template-columns: repeat(2, 4fr);
+                }
+
+             .faqOpt button{
+                background-color: white;
+                border-radius: 0;
+                border: 2px solid rgb(255, 174, 0);
+                width: 90%;
+                margin: 5px;
+                transition: color 0.3s ease-in;
+             }
+             .faqOpt button:hover{
+                color: rgb(255, 174, 0);
+                cursor: pointer;
+             }
+
+             .faqList{
+                display: grid;
+                gap:60px;
+                margin: 5%;
+                grid-template-columns: repeat(3, 1fr);
+             }
+             .image-card{
+                 overflow: hidden;
+                transition: transform 0.3s ease-in-out;
+                 width: 100%;
+             }
+             .image-card::before{
+                content:"";
+                position: absolute;
+                background-color: rgba(0, 0,0, 0.5);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+             }
+             .image-card:hover{
+                transform: scale(1.2);
+                 
+                
+             }
+             .over:hover{
+                background-color: rgba(0, 0,0, 0.6);
+            
+             }
+             .faqImg1{
+                background-image: url(floating.jpg);
+                background-size: cover;
+        
+             }
+             .faqImg2{
+                background-image: url(drilling.jpg);
+                background-size: cover;
+
+             }
+             .faqImg3{
+                background-image: url(carpentry.jpg);
+                background-size: cover;
+                
+             }
+             .faqImg1, .faqImg2, .faqImg3{
+                height: 40vh;
+                color: white;
+                font-size: medium;
+                font-weight: 500;
+                width: 90%;
+                gap: 3%;
+                margin: 3%;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                 background-color: rgba(0, 0, 0, 0.3);
+                 background-blend-mode: darken;
+             }
+             .faqImg{
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                width: 100%;
+                grid-template-columns: repeat(3,1fr);
+             }
+
+      
+        .Number{
+            background-color: black;
+            display: grid;
+            color: white;
+            font-size: large;
+            font-weight: 600;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70%;
+            justify-content: end;
+            height: 30%;
+            padding: 22px;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .lower-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: rgb(255, 174, 0);
+            height: 130px;
+            gap: 20%;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .logo1 img{
+             width: 200px;
+            margin: 25px;
+        }
+
+        .lower-button button{
+            margin: 5%;
+            width: 170px;
+            max-width: 200%;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+         .bookBtn{
+            background-color: black; 
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .bookBtn:hover{
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer{
+            margin: 10px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        .footer-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        .footer-right{
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <div class="icons">
+
+   <div class="social-icon">
+
+        <div>
+            <img src="19281bb86d83975cddeccdf56ec7e441.jpg" style="height: 18px; margin-top: 3px;margin-right: 0px;">
+        </div>
+        <div>
+            <img src="images (1).png">
+        </div>
+          <div>
+            <img src="images (2).png">
+          </div>
+            <div>
+                <img src="instagram-logo-white-circle-outline-icon-ig-app-vector-56237085.avif">
+            </div>
+
+      </div>
+
+  <div class="icon-notifications">
+          <a href="  ">
+            <button class="icon-btn">FAQs</button>
+        </a>
+        <a href="safety.html">
+            <button class="icon-btn"> Safety Policy</button>
+        </a>
+        
+        <a href="privacy.html">
+            <button class="icon-btn">Privacy Policy</button>
+        </a>
+        <a href="contact.html">
+            <button class="icon-btn">Contact Us</button>
+        </a>
+          
+    </div>
+
+  </div>
+
+  <div class="header-info">
+    <div class="logo">
+        <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+    </div>
+
+    <div class="info" style="font-size: larger;">
+        <a href="index.html"  rel="noopener noreferrer"><p>Home</p></a>
+          <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+           <a href="About.html">
+             <p>About Us - Trusted Laundromart -True Wash Laundromart, Akoka Lagos</p>
+           </a>
+           <a href="news.html">
+                          <p> News</p>
+           </a>
+    </div>
+
+    <div class="header-name">
+  <h1>Frequently Asked Questions</h1>
+</div>
+  </div>
+ 
+  <main>
+        
+    <div class="main">
+        <div class="faqHead">
+            <p style="font-weight: 600; font-size: small;">ON CALL ASSIST</p>
+            <h2>We're Here To Help</h2>
+            <p>Nulla porttitor accumans tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie.
+                Curabitur aliquet quam id dui posuere blandit quisque velit nisi.</p>
+        </div>
+
+
+         <div class="faqList">
+            <div>
+                <img src="ff"> We're never late</div>
+              <div>
+                <img src="ff"> 24/7 Emergency Callout</div>
+                <div>
+                 <img src="ff"> Satisfaction Guaranteed</div>
+         </div>
+
+
+          <div class="faqOpt">
+            <button>   What is meant by best price promise?</button>
+            <button>   Are you insured?</button>
+            <button>  Are your quotes no obligations?</button>
+            <button>   Do you offer a warranty for your work?</button>
+            <button> Are you insured?</button>
+            <button>  Do you supply your own materials?</button>
+            <button>   Do you offer financing?</button>
+            <button>  Avada is the $1 Selling Theme</button>
+          </div>
+
+
+           <div class="faqImgHead">
+           <p style="font-weight: 600; font-size: small;">ON CALL ASSIST</p>
+            <h2>Some Examples of Our Work</h2>
+           </div>
+
+            <div class="faqImg">
+                <div class="image-card">
+                    <div class="faqImg1 over">Floating Shelves</div>
+                </div>
+
+                <div class="image-card">
+                     <div class="faqImg2 over">Man Planning Construction</div>
+                </div>
+
+                <div class="image-card">
+                    <div class="faqImg3 over">Man drilling wood</div>
+                </div>
+                     
+            
+            </div>
+
+
+
+
+
+    </div>
+
+
+
+    <div class="news">
+            <div class="news-heading">
+                <p>ARTICLE FROM THE WORKSHOP</p>
+                <H2> Latest Handyman News</H2>
+            </div>
+            <div class="news-headingBtn" >
+                <button class="readMoreBtn" data-page="news.html">Read More News</button>
+            </div>
+
+
+            <div class="news-list">
+
+
+                <div class="News-list">
+                    <div class="newsImg">
+                        <img src="floating.jpg" style="color: rgba(0, 0, 0, 0.8);">
+                    </div>
+                            <div class="newsHead">
+                                    <h3>why TruewashLaundromart in Akoka is Your Premium Choice For Professional Clothes Washer Services</h3>
+                                    <P>1087 words  5.6 min read</P>
+
+                            </div>
+                
+                    <div class="moreNews-list">
+                        <p>Are you tired of spending hours doing laundry at home? <span>[...]</span></p>
+                    </div>
+                        <button class="readMoreBtn" data-page="premium.htmk">Read More</button>
+                    
+                </div>
+
+
+
+                <div class="News-list">
+                    <div class="newsImg">
+                        <img src="Screenshot_20250704-114713_1-1 (1).jpg">
+                    </div>
+                    <div class="newsHead">
+                        <h3>Garment Steamer Benefits: 7 Powerful Reasons Why Your Delicate Clothes Need Professional Steaming</h3>
+                            <p>1377 words  7.2 min read</p>
+                    </div>
+
+                    <div class="moreNews-list">
+                        Introduction Garment steamer benefits extend far beyond simple wrinkle removal, <span>[...]</span>
+                    </div>
+                        <button class="readMoreBtn" data-page="garmentsteam.html">Read More</button>
+                </div>
+
+
+
+                <div class="News-list">
+
+                            <div class="newsImg">
+                                <img src="P1028336-Enhanced-NR-600x451.jpg" alt="">
+                            </div>
+
+                            <div class="newsHead">
+                                <h3>10 Laundry Mistakes To Avoid And How We Fix Them</h3>
+                            <P>929 words  4.8 min read</P>
+                            </div>
+                            <div class="moreNews-list">
+                                <p>Introduction Let's face it: laundry seems simple until it goes <span>[...]</span></p>
+                </div>
+                                <button class="readMoreBtn" data-page="laundryMistake.html">Read More</button>
+                            </div>
+
+                
+            </div>
+
+
+    </div>
+   
+  </main>
+
+
+
+ <div class="Number">
+        <div style="color: rgb(255, 174, 0);">Talk To Us Now</div>
+        <div>+2348037905770</div>
+    </div>
+
+    <div class="lower-section">
+        <div class="logo1">
+            <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+        </div>
+        <div class="lower-button">
+            <button class="readMoreBtn readContact" data-page="contact.html">Chat With Us</button>
+            <a href="contact.html">
+                 <button class="bookBtn">Book An Appointment</button>
+             </a>
+        </div>
+    </div>
+
+      <div class="footer">
+        <div class="footer-list">
+             <div>
+                  <a href="index.html" rel="noopener noreferrer"><p>Home</p></a>
+             </div>
+         <div>
+              <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+         </div>
+         <a href="About.html">
+             <div >About Us-Trusted Laundromart-Truewash laundromart, Akoka Lagos</div>
+              
+         </a>
+          <a href="news.html">
+                <div>News</div>
+              </a>
+
+              <a href="FAQS.html" rel="noopener noreferrer"> 
+                <div style="color: rgb(255, 174, 0)">FAQs</div>
+            </a>
+
+                <a href="safety.html" rel="noopener noreferrer">
+                    <div>Safety Policy</div>
+                </a>
+                 
+                <a href="privacy.html" rel="noopener noreferrer">
+                     <div>Privacy Policy</div>
+                </a>
+                    <a href="contact.html" rel="noopener noreferrer">
+                           <div>Contact Us</div>
+                    </a>
+
+                   <div>Like us on Facebook</div>
+                     <div> Follow Us On Instagram</div>
+
+        </div>
+
+        <div class="footer-right">
+            @Copyright 2025| Truewash Greenpathsdev| All Rights Reserved
+        </div>
+        
+    </div>
+
+      
+    <script>
+        document.querySelectorAll(".readMoreBtn").forEach(
+            btn => {
+                btn.addEventListener( "click",
+                    () =>{
+                        window.location.href = btn.getAttribute("data-page");
+                    } );
+            }
+        );
+    </script>
+
+</body>
+
+
+
+</html>

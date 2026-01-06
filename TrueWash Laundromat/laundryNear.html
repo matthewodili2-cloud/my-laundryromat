@@ -1,0 +1,644 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+
+    <style>
+      body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        font-size: 21px;
+      }
+         .icons{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            margin: -8px;
+            margin-bottom: 0px;
+            gap: 40%;
+        }
+
+         .icons{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            margin: -8px;
+            margin-bottom: 0px;
+            gap: 40%;
+        }
+
+        
+           .icon-btn{
+                cursor: pointer;
+                background-color: rgb(0, 0, 0,);
+                transition: bachground-color 0.3s ease;
+             }
+             .icon-btn:hover{
+                background-color: rgba(82, 81, 81, 0.7);
+             }
+             .icon-btn:active{
+                  background-color: rgba(82, 81, 81, 0.7);
+             }
+
+             .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+              .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+             .info p:hover{
+                color: white;
+             }
+             .footer-list div{
+                cursor: pointer;
+                transition: color 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list div:hover{
+                 color:rgb(255, 174, 0) ;
+             }
+             .readMoreBtn{
+                cursor: pointer;
+                transition: color background-color 0.3s ease;
+                color: black;
+                text-decoration: none;
+             }
+             .readMoreBtn:hover{
+                color: white;
+                background-color: black;
+             }
+        
+
+        
+
+        .social-icon{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            margin: 8px;
+            gap: 0px;
+        }
+
+        .icon-notifications{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 0px;
+            margin-left: 100px;
+        }
+
+        .header-info{
+            height: 100%;
+            background-color: rgb(255, 174, 0);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+        .header-info div{
+          flex: 1 1 45%;
+          height: 15vh;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          margin-right: 10px;
+        }
+
+        .logo img{
+            width: 200px;
+            margin-top: 30px;
+            padding: 0;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+       .social-icon img{
+            height: 30px;
+            margin-right: 10px;}
+
+             .icon-notifications button{
+            width: 100px;
+            height: 50px;
+            color: antiquewhite;
+            background-color: black;
+            border-style: none;
+             }
+             .header-name h1{
+                    display:grid ;
+                    width: 80%;
+                    justify-content: center;
+                    align-self: center;
+                    margin-bottom: 10%;
+                    margin-top: 7%;
+
+             }
+             section img{
+                height: 80vh;
+                width: 90%;
+                justify-content: center;
+                align-content: center;
+                margin-left: 4%;
+             }
+             main{
+                margin-top: 0;
+                font-size: larger;
+             }
+             section{
+                margin: 3%;
+             }
+
+             
+             .main-foot {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                justify-items: center;
+                align-items: center;
+                width: 100%;
+                background-color: rgb(239, 237, 237);;
+             }
+             .main-foot1{
+                margin-top: -330px;
+                margin-bottom: 0px;
+                
+             }
+             .main-foot2{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-top: -200px;
+                gap: 20px;
+                margin-left: 2%;
+                margin-right: 2%;
+             }
+
+             .News-list{
+                background-color: rgb(250, 250, 250);
+                display: grid;
+                grid-template-rows: repeat(1, 1fr);
+                justify-items: center;
+                align-items: center;
+                width: 90%;
+                margin-bottom: 15%;
+                padding: 3%;
+                margin-top: -50px;
+             }
+     
+             .newsImg img {
+                justify-items: center;
+                align-items: center;
+                height: 52vh;
+                margin: 2%;
+                width: 89%;
+             }
+             .newsHead h4{
+                background-color:  rgb(255, 174, 0);
+                height: 3px;
+                width: 50%;
+                margin-left: 25%;
+                margin-bottom: 10%;
+             }
+             .News-list button{
+                color: black;
+                width: 38%;
+                border: none;
+                height: 6vh;
+                border-radius: 20px;
+                margin-top: 50px;
+                margin-bottom: 5%;
+                font-weight: bold;
+                background-color: rgb(255, 174, 0);
+             }
+
+             .item{
+                padding: 10px;
+                cursor: pointer;
+                transition: color 0.2s;
+                text-decoration: none;
+                color: inherit;
+             }
+             .item:hover{
+                color: rgb(255, 174, 0);
+             }
+             .item:active{
+                color: rgb(255, 174, 0);;
+             }
+             .main-img1 {
+                margin-top: -2%;
+                width: 95%;
+                height: auto;
+                margin-left: 2%;
+                margin-right: 2%;
+             }
+             .main-img2 {
+                margin-top: 6%;
+                width: 88%;
+                height: auto;
+                margin-left: 2%;
+                margin-right: 2%;
+             }
+             main img{
+                width: 50%;
+                height: auto;
+             }
+
+             main{
+                margin: 2%;
+             }
+            
+
+
+             
+        .lower-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: rgb(255, 174, 0);
+            height: 130px;
+            gap: 20%;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .logo1 img{
+             width: 200px;
+            margin: 25px;
+        }
+
+        .lower-button button{
+            margin: 5%;
+            width: 170px;
+            max-width: 200%;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+        
+        .bookBtn{
+            background-color: black; 
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .bookBtn:hover{
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer{
+            margin: 10px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        .footer-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        .footer-right{
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <div class="icons">
+
+   <div class="social-icon">
+
+        <div>
+            <img src="19281bb86d83975cddeccdf56ec7e441.jpg" style="height: 18px; margin-top: 3px;margin-right: 0px;">
+        </div>
+        <div>
+            <img src="images (1).png">
+        </div>
+          <div>
+            <img src="images (2).png">
+          </div>
+            <div>
+                <img src="instagram-logo-white-circle-outline-icon-ig-app-vector-56237085.avif">
+            </div>
+
+      </div>
+
+        
+  <div class="icon-notifications">
+          <a href="FAQS.html "  >
+            <button class="icon-btn">FAQs</button>
+        </a>
+        <a href="safety.html"   >
+            <button class="icon-btn">Safety Policy</button>
+        </a>
+        
+        <a href="privacy.html"   >
+            <button class="icon-btn">Privacy Policy</button>
+        </a>
+        <a href=" "  >
+            <button class="icon-btn">Contact Us</button>
+        </a>
+          
+    </div>
+
+  </div>
+
+  
+
+  <div class="header-info">
+    <div class="logo">
+        <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+    </div>
+<div class="info" style="font-size: larger;">
+        <a href="index.html"  rel="noopener noreferrer"><p>Home</p></a>
+          <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+           <a href="About.html">
+             <p>About Us - Trusted Laundromart -True Wash Laundromart, Akoka Lagos</p>
+           </a>
+           <a href="news.html">
+                          <p> News</p>
+           </a>
+    </div>
+
+   
+ 
+  </div>
+
+
+
+    <div class="header-name">
+    <h1 style=" font-weight: 700; font-size: 40px; padding-bottom: 65px;">Laundromat Near Me Lagos - Fast, Clean, And Affordable Service </h1>
+
+</div>
+  </div>
+
+  <div class="main-img">
+    <img class="main-img1" src="P1028352-Enhanced-NR-800x533 (1).jpg" alt="">
+    <img  class="main-img2" src="P1028336-Enhanced-NR-600x451.jpg" alt="">
+  </div>
+
+
+  
+  <main
+  style="margin-top: 10%;">
+  <h1>Laundromat near me Lagos – Enjoy fast, clean, and affordable laundry services. Choose drop-off or self-service options anywhere in Lagos.</h1>
+   <br> 
+  <div>
+    <h1> Why Finding a Good Laundromat Near You in Lagos Matters</h1>
+   <p>Lagos is a bustling city, and keeping up with laundry can be stressful. When you search “laundromat near me Lagos”, what you really want is:</p>
+<br><br>
+<ul>
+    <li>A clean, hygienic environment</li>
+    <li>Fast turnaround time</li>
+    <li>Affordable pricing</li>
+    <li>Friendly service</li>
+    <li>Convenient location</li>
+</ul>
+</div>
+    <br>
+   <div>
+    <h1 id="#what">What to Expect at a Quality Laundromat in Lagos</h1>
+        <ol>
+            <li> Clean environment
+                <p>At Truewash, machines are sanitized daily, and customer areas are kept spotless — because your clothes deserve to be truly clean.</p>
+
+            </li>
+            <li>Need same-day service? No problem. Our express packages mean your clothes can be picked up in the morning and delivered fresh by evening.</li>
+           <br> <br>
+            <li>Looking for a laundromat near you in Alapere, Ketu, Ikeja, or Lekki
+
+            <br><br>
+            No hidden charges. Transparent rates whether you drop off, request pick-up, or wash it yourself.
+                    <br> <br>
+ </li>
+            <li>Self-Service Flexibility
+                <p>Want to do it yourself? Use our modern washers and dryers with minimal wait time. Enjoy convenience, control, and comfort. </p>
+            </li>
+            <br> <br>
+            <li> Expert Handling for Delicates
+                <p>From designer clothes to baby wear, our expert team handles your garments with care.</p>
+            </li>
+        </ol>
+        <div class="more-listItem">
+            <br>
+            <img src="P1028366-600x375.jpg" alt="">
+            <p>
+                        Areas We Serve in Lagos
+        <br><br>
+
+        Truewash Laundromat Lagos got you covered!
+
+        <br><br><br>
+        Finding a Good Laundromat Near You in Lagos Matters
+            </p>
+            <ul>
+                <li> <a href="#what" class="item">What to Expect at a Quality Laundromat in Lagos</a></li>
+                <li> <a href="#area" class="item"> Areas We Serve in Lagos</a></li>
+                  <li> <a href="#drop" class="item">Drop-off or Pick-up? Your Choice!</a></li>
+                    <li> <a href="#ready" class="item">Ready for Laundry That Works on Your Schedule.</a></li>
+                      <li> <a href="#book" class="item"> Book Your Laundry Pick Up Services  or visit our location Contact Us</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <br><br><br>
+
+   <div id="#drop">
+    <h2>Drop-off or Pick-up? Your Choice!</h2>
+    <p>Too busy to come in? We’ll come to you.
+        <br><br>
+        Our Services schedule a pick-up online, Drop-off Services, Pick Up Services and we’ll take care of the rest — wash, dry, fold, and return. Laundry day has never been this easy.
+</p>
+    <img src="P1028354-Enhanced-NR-scaled (1).jpg" alt="">
+   </div>
+
+   <div>
+    <h1 id="#ready">Ready for Laundry That Works on Your Schedule.
+ </h1>
+         <br> <br> <br> <br>
+ <h1 id="#book"> Book Your Laundry Pick Up Services  or visit our location Contact Us .</h1>
+   </div>
+
+<div class="main-foot">
+ <div class="main-foot1">
+    <p style="font-size: small; margin-left: 30px;">CONTINUE READING</p>
+<H2>Related Posts</H2>
+ </div>
+
+<div class="main-foot2">
+    
+              <div class="News-list">
+                <div class="newsImg">
+                    <img src="Screenshot_20250704-114713_1-1 (1).jpg">
+                </div>
+                <div class="newsHead">
+                    <h3>Garment Steamer Benefits: 7 Powerful Reasons Why Your Delicate Clothes Need Professional Steaming</h3>
+                        <p>1377 words  7.2 min read</p>
+                            <h4></h4>
+                    </div>
+
+
+                <div class="moreNews-list">
+                    Introduction Garment steamer benefits extend far beyond simple wrinkle removal, <span>[...]</span>
+                </div>
+                     <button class="readMoreBtn" data-page="garmentsteam.html">Read More</button>
+            </div>
+
+
+
+              <div class="News-list">
+
+                        <div class="newsImg">
+                            <img src="P1028336-Enhanced-NR-600x451.jpg" alt="">
+                        </div>
+
+                        <div class="newsHead">
+                            <h3>10 Laundry Mistakes To Avoid And How We Fix Them</h3>
+                        <P>929 words  4.8 min read</P>
+                        <h4></h4>
+                    </div>
+                        <div class="moreNews-list">
+                            <p>Introduction Let's face it: laundry seems simple until it goes <span>[...]</span></p>
+              </div>
+                            <button class="readMoreBtn" data-page="laundryMistake.html">Read More</button>
+                        </div>
+
+                            <div class="News-list">
+                <div class="newsImg">
+                     <img src="gallery-01 (1).jpg">
+                </div>
+                        <div class="newsHead">
+                                <h3>why TruewashLaundromart in Akoka is Your Premium Choice For Professional Clothes Washer Services</h3>
+                                  <P>1087 words  5.6 min read</P>
+
+                        </div>
+             
+                <div class="moreNews-list">
+                    <p>Are you tired of spending hours doing laundry at home? <span>[...]</span></p>
+                </div>
+                     <button class="readMoreBtn" data-page="premium.html">Read More</button>
+                
+             </div>    
+
+               
+           
+
+</div>
+
+
+</div>
+
+  </main>
+
+   
+
+
+
+
+ <div class="Number"
+ style="
+          background-color: black;
+            display: grid;
+            color: white;
+            font-size: large;
+            font-weight: 600;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70%;
+            justify-content: end;
+            height: 30%;
+            padding: 22px;
+            margin-left: -7px;
+            margin-right: -7px;
+ 
+ "
+ >
+        <div style="color: rgb(255, 174, 0);">Talk To Us Now</div>
+        <div>+2348037905770</div>
+    </div>
+
+    <div class="lower-section">
+        <div class="logo1">
+            <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+        </div>
+        <div class="lower-button">
+            <button class="readMoreBtn" data-page="contact.html">Chat With Us</button>
+             <button class="bookBtn">Book An Appointment</button>
+             <a href="contact.html">
+                 <button class="bookBtn">Book An Appointment</button>
+             </a>
+        </div>
+    </div>
+
+      <div class="footer">
+        <div class="footer-list">
+             <div>
+                  <a href="index.html" rel="noopener noreferrer"><p>Home</p></a>
+             </div>
+         <div>
+              <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+         </div>
+          <div >About Us-Trusted Laundromart-Truewash laundromart, Akoka Lagos</div>
+              
+          <a href="news.html">
+                <div style="color: rgb(255, 174, 0)">News</div>
+              </a>
+
+              <a href="FAQS.html" rel="noopener noreferrer"> 
+                <div>FAQs</div>
+            </a>
+
+                <a href="safety.html" rel="noopener noreferrer">
+                    <div>Safety Policy</div>
+                </a>
+                 
+                <a href="privacy.html" rel="noopener noreferrer">
+                     <div>Privacy Policy</div>
+                </a>
+                    <a href="contact.html" rel="noopener noreferrer">
+                           <div>Contact Us</div>
+                    </a>
+
+                   <div>Like us on Facebook</div>
+                     <div> Follow Us On Instagram</div>
+
+        </div>
+
+        <div class="footer-right">
+            @Copyright 2025| Truewash Greenpathsdev| All Rights Reserved
+        </div>
+        
+    </div>
+
+       
+    <script>
+        document.querySelectorAll(".readMoreBtn").forEach(
+            btn => {
+                btn.addEventListener( "click",
+                    () =>{
+                        window.location.href = btn.getAttribute("data-page");
+                    } );
+            }
+        );
+    </script>
+
+
+
+   
+</body>
+
+
+
+</html>

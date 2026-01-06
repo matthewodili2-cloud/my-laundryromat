@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+
+    <style>
+        body{
+            font-size: 21px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+
+        /* header style */
+        .icons{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            margin: -8px;
+            margin-bottom: 0px;
+            gap: 40%;
+
+        }
+        
+           .icon-btn{
+                cursor: pointer;
+                background-color: rgb(0, 0, 0,);
+                transition: bachground-color 0.3s ease;
+             }
+             .icon-btn:hover{
+                background-color: rgba(82, 81, 81, 0.7);
+             }
+             .icon-btn:active{
+                  background-color: rgba(82, 81, 81, 0.7);
+             }
+
+             .info p{
+                cursor: pointer;
+                transition: color 0.3s ease;
+             }
+
+              .info a{
+                text-decoration: none;
+                color: inherit;}
+
+             .info p:hover{
+                color: white;
+             }
+
+              .info a{
+                text-decoration: none;
+                color: inherit;
+              }
+             .footer-list div{
+                cursor: pointer;
+                transition: color 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list a{
+                text-decoration: none;
+                color: inherit;
+             }
+             .footer-list div:hover{
+                 color:rgb(255, 174, 0) ;
+             }
+             .readMoreBtn{
+                cursor: pointer;
+                transition: color background-color 0.3s ease;
+                color: black;
+                text-decoration: none;
+             }
+             .readMoreBtn:hover{
+                color: white;
+                background-color: black;
+             }
+        
+
+        .social-icon{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            margin: 8px;
+            gap: 0px;
+        }
+
+        .icon-notifications{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 0px;
+            margin-left: 100px;
+        }
+
+        .header-info{
+            height: 100%;
+            background-color: rgb(255, 174, 0);
+            display: flex;
+            gap: 100px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        .logo img{
+            width: 200px;
+            margin: 30px;
+        }
+        .info{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+            .icon-notifications button{
+            width: 100px;
+            height: 50px;
+            color: antiquewhite;
+            background-color: black;
+            border-style: none;
+        }
+        .social-icon img{
+            height: 30px;
+            margin-right: 10px;
+        }
+
+
+        .welcome-section{
+             background-color: rgba(146, 95, 1, 0.895);
+             font-family: Georgia, 'Times New Roman', Times, serif;
+             padding: 30px;
+             padding-top: 70px;
+             padding-left: 50px;
+             margin: -8px;
+             margin-top: 100px;
+             color: white;
+             font-size: small;
+        }
+        .welcome-section h1{
+            font-size: 40px;
+        }
+
+        .welcome-info{
+            padding-top: 70px;
+            min-height: 500px;
+        }
+
+        .cards{
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display:flex ;
+            gap: 15px;
+            justify-content: center;
+            position: relative;
+            top: -85px;
+            padding: 0 6px;
+            font-size: 23px;
+        }
+
+        .cards div{
+            background: white;
+            min-width: 220px;
+            max-width: 320px;
+            padding: 12px;
+            border-radius: 5px;
+            box-shadow: 0 6px 13px rgba(0, 0, 0, 0.08);
+            border: 1px solid
+            rgba(0, 0, 0, 0.06);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .more-info-about{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 180px;
+            margin: 20px;
+            font-size: 21px;
+            margin-bottom: 180px;
+            margin-top: 100px;
+        }
+
+        .services{
+            display: grid;
+            justify-items: center;
+            margin: -8px;
+             background-color: black;
+
+        }
+        .reveal{
+             opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .reveal.revealed{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .over{
+            overflow: hidden;
+                transition: transform 0.3s ease-in-out;
+                 width: 100%;
+        }
+        .over:hover{
+             background-color: rgba(0, 0,0, 0.8);
+              transform: scale(1.1);
+        }
+
+        .service-list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 60px;
+            gap: 50px;
+            font-size: larger;
+        } 
+        
+        .service-list p{
+            display: grid;
+            justify-items: center;
+        }
+
+        .service-list1{
+            padding: 100px;
+            max-width: 320px;
+            background-image: url(Truewash-Laundromat-machines-1.jpg);
+            background-size: cover;
+            position: relative;
+            background-repeat: no-repeat;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            background-blend-mode: darken;
+        }
+        
+        .service-list2{
+            padding: 100px;
+            max-width: 320px;
+            background-image: url(P1028366-600x375.jpg);
+            background-size: cover;
+            position: relative;
+            background-repeat: no-repeat;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            background-blend-mode: darken;
+        }
+
+
+
+        .more-info-about image{
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cards img{
+            height: 110px;
+            width: 220px;
+        }
+
+        .cards button{
+            margin-top: 50px;
+            margin-bottom: 0;
+            height: 35px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 500;
+            background-color:   rgb(255, 174, 0);
+            width: 100px;
+        }
+
+        .price button{
+            height: 35px;
+            width: 30%;
+            max-width: 130px;
+             border-radius: 30px;
+             margin-top: 30px;
+            border: none;
+            font-weight: 500;
+            background-color:   rgb(255, 174, 0);
+
+        }
+
+        h1,h4{
+            margin-bottom: 50px;
+        }
+      
+
+        .slider-image{
+            position:relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        .slider-image img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out,
+        }
+
+            .slider-image img.active{
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .slider-image img.prev{
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+        .checklist{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: large;
+        }
+
+        .checklist li::before{
+            content: "\2714";
+            color:  rgb(255, 174, 0);
+        }
+
+            .franchise{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0px;
+            }
+        .franchise-opt{
+            margin-left: 20px;
+            height: 500px;
+            padding: 70px;
+            margin-top: 150px;
+            font-size: small;
+            background-color: rgb(239, 237, 237);
+
+        }
+        .franchise-opt h2{
+            font-size: 35px;
+        }
+
+        .franchise-opt button{
+        width: 70%;
+        padding: 20px;
+        background-color: white;
+        height: 18%;
+        margin: 15px;
+        border: 1.5px solid rgb(255, 174, 0);
+        }
+
+        .franchise-img{
+            background-image: url('Truewash-Laundromat-machines-1.jpg');
+            background-size: cover;
+            height: 750px;
+            margin-top: 70px;
+            margin-left: ;
+        }
+        .message{
+             background-color: rgb(239, 237, 237);
+             font-size: large;
+             height: 600px;
+             margin-left: -5px;
+             margin-right: -5px;
+             padding: 30px;
+             margin-top: 200px;
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+        }
+
+        form{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 700px ;
+            max-width: 90%;
+            padding: 20px;
+        }
+        input{
+            height: 40px;
+            width: 80%;
+            margin: 5px;
+            padding: 5px;
+            border: none;
+        }
+        .note{
+            margin-top: -5px;
+            width: 185%;
+            height: 130px;
+        }
+        .message button{
+            height: 45px;
+            width: 30% ;
+            margin: 30px;
+            color: black;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(255, 174, 0);
+            padding: 10px;
+        }
+        .Testimonials{
+            background-image: url('cleaner-house-black-woman-cleaning-600nw-2218359317.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            margin-top: 135px;
+        }
+
+        .Number{
+            background-color: black;
+            display: grid;
+            color: white;
+            font-size: large;
+            font-weight: 600;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70%;
+            justify-content: end;
+            height: 30%;
+            padding: 22px;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .lower-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: rgb(255, 174, 0);
+            height: 130px;
+            gap: 20%;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        .logo1 img{
+             width: 200px;
+            margin: 25px;
+        }
+
+        .lower-button button{
+            margin: 5%;
+            width: 170px;
+            max-width: 200%;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+         .bookBtn{
+            background-color: black; 
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .bookBtn:hover{
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer{
+            margin: 10px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        .footer-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        .footer-right{
+            margin-top: 15%;
+            margin-bottom: 5%;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+  <div class="icons">
+
+   <div class="social-icon">
+
+        <div>
+            <img src="19281bb86d83975cddeccdf56ec7e441.jpg" style="height: 18px; margin-top: 3px;margin-right: 0px;">
+        </div>
+        <div>
+            <img src="images (1).png">
+        </div>
+          <div>
+            <img src="images (2).png">
+          </div>
+            <div>
+                <img src="instagram-logo-white-circle-outline-icon-ig-app-vector-56237085.avif">
+            </div>
+
+      </div>
+
+  <div class="icon-notifications">
+          <a href="FAQS.html ">
+            <button class="icon-btn">FAQs</button>
+        </a>
+        <a href="safety.html">
+            <button class="icon-btn">Safety Policy</button>
+        </a>
+        
+        <a href="privacy.html">
+            <button class="icon-btn">Privacy Policy</button>
+        </a>
+        <a href="contact.html ">
+            <button class="icon-btn">Contact Us</button>
+        </a>
+          
+    </div>
+
+  </div>
+
+  <div class="header-info">
+    <div class="logo">
+        <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+    </div>
+
+    <div class="info" style="font-size: larger;">
+        <p style="color: antiquewhite;">Home</p>
+        <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+        <a href="About.html"rel="noopener noreferrer">
+                 <p>About Us - Trusted Laundromart -True Wash Laundromart, Akoka Lagos</p>
+        </a>
+        
+        <a href="news.html" rel="noopener noreferrer">
+                  <p> News</p>
+        </a>     
+    </div>
+
+
+  </div>
+
+ 
+  <div class="slider-image">
+     <img src="Truewash-Laundromat-machines-1.jpg" class="slide-active">
+    <img src="waiting room.jpg" class="slide">
+    <img src="P1028336-Enhanced-NR-600x451.jpg" class="slide">
+    <img src="P1028339-Enhanced-NR-scaled.jpg" class="slide">
+  </div>
+
+  <div class="reveal">
+
+    <div class="welcome-section">
+         <h4>TRUSTED LAUNDROMART SERVICES</h4>
+    <h1>WELCOME TO YOUR BEST LAUNDROMART</h1>
+    <p>Unleash the power of our laundromart, where laundry chores transforms
+        into blissful relaxation.
+    </p>
+    </div>
+
+    <div class="welcome-info">
+            <div class="cards">
+
+                   <div>
+            <img src="P1028366-600x375.jpg">
+            <h3>Drop-Off Services</h3>
+            <P>
+                TrueWash laundromart in Akoka, Lagos, brings you the simplicity
+                of our Drop-Off services.Just swing by our location, and our efficient staff 
+                will swiftly handle your laundry drop-off
+            </P>
+            <button class="readMoreBtn" data-page="indexDropoffService.html">Read More</button>
+        </div>
+
+         <div>
+             <img src="P1028336-Enhanced-NR-600x451.jpg">
+                <h3>Pick Up Services</h3>
+                <p>Experience Unparalled convenience with TrueWash Laundromart in Akoka,Lagos.Say goodbye 
+                    to the hassle of carrying heavy laundry bags as TrueWash Laundromart will deliver right away!
+                </p>
+                <button class="readMoreBtn" data-page="pickUp.html">Read More</button>
+            </div>
+
+          <div>
+            <img src="waiting room.jpg">
+                <h3>Comfortable Waiting Area</h3>
+                <P>
+                    At TrueWash Laundromart at Akoka, Lagos,we understand that waiting for
+                    your laundry can be a common routine. That's why we've designed a comfortable
+                    waiting area for our Valued customers
+                </P>
+                     <button class="readMoreBtn" data-page="waiting.html">Read More</button>
+        </div>
+
+            </div>
+
+    </div>
+
+  </div>
+    <div class="more-info-about reveal">
+
+        <div>
+            <div class="more-info-about-heading">
+                <h5>TRUEWASH LAUNDROMART</h5>
+                <h1>Why We Are The Best</h1>
+            </div>
+            <div class="info">
+                <ul class="checklist">
+                    <li>Clean and well-mainted machines</li>
+                    <li>Variety of machines sizes</li>
+                    <li>Adequate seating and table space</li>
+                    <li>Clean and well-maintained facilities</li>
+                    <li>Affordable prices</li>
+                    <li>Friendly and helpful staff</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="image">
+            <img src="20231114-P1866668-600x445.jpg" 
+            style="height: 220px;
+                    margin-top: 90px;
+                     border-radius: 10px;
+            box-shadow: 0 6px 13px rgba(0, 0, 0, 0.4);
+            border: 0px solid
+            rgba(0, 0, 0, 0.06);
+            ">
+        </div>
+
+         <div class="image">
+            <img src="P1028339-Enhanced-NR-scaled.jpg" 
+            style="height: 220px;
+                     border-radius: 10px;
+            box-shadow: 0 6px 13px rgba(0, 0, 0, 0.4);
+            border: 0px solid
+            rgba(0, 0, 0, 0.06);
+            
+            ">
+         </div>
+
+          <div class="price">
+            <h1>Affordable Price</h1>
+
+            <p>We offer reasonable prices for our services. We understand customers is king
+                and we appreciate you, this is why TrueWash is affordable and specifically
+                made to fit your pocket.
+            </p>
+
+                <button class="readMoreBtn" data-page="About.html">Try Us Now</button>
+          </div>
+
+    </div>
+
+
+    <div class="services reveal">
+        <div class="heading-services">
+            <h1 style="color: white; margin: 50px; font-size: 35px; font-weight: bolder;" >Our Services</h1>
+        </div>
+
+         <div class="service-list">
+             <div class="service-list1 over">
+                <h3>Self-Service Washing Machines</h3>
+                <p>Customers can use self-service washing machines to wash their clothes.
+                    Our machines come in various sizes to accomodate different load sizes
+                </p>
+             </div>
+
+             <div class="service-list2 over">
+                <h3>Self-service Dryers</h3>
+                <p>Customers can use self-service dryers to dry their clothes after they heading-servicesbeen washed.These
+                    machines also comes in different sizes to accomodate different load sizes.
+                </p>
+             </div>
+
+              <div class="service-list2 over">
+                <h3>Stain Removal</h3>
+                <P>We offer stain removal services to help customers get rid of tough stains on their clothes</P>
+              </div>
+
+               <div class="service-list1 over">
+                <h3>PickUp And Delivery</h3>
+                <P>We ofer pickup and delivery services, where the staff picks up the laundry from your
+                    homes or office and delivers it back once it's been dry cleaned.
+                </P>
+
+               </div>
+         </div>
+
+
+
+
+    </div>
+    
+<div class="franchise reveal">
+   <div class="franchise-opt">
+    <p>WE ARE HERE FOR YOU</p>
+    <h2>We're Here To Keep Your Cloth Sparkling</h2>
+    <button>Clean and spotless laundromart</button>
+    <button>Trusted by Many</button>
+   </div>
+   <div class="franchise-img"></div>
+</div>
+
+<div class="message reveal">
+    
+    <div class="inner-message">
+         <p>GET IN TOUCH TODAY</p>
+    <h2>Recieve Your Free Quote</h2>
+
+        <form>
+            <div>
+                <input placeholder="First Name" id="name">
+            </div>
+            <div> 
+                <input placeholder="surname" id="surName">
+            </div>
+            <div>
+                 <input placeholder="Email" id="email">
+            </div>
+            <div>
+                <input placeholder="Phone Number"  id="num">
+            </div>
+            <div>
+                <P>Your Message:</P>
+                <input class="note" id="msg">
+                <P id="outPutMsg" 
+                style="margin-bottom: 0px;
+                justify-items: center;
+                display: grid;
+                align-items: center; ">
+
+                </P>
+            </div>
+        </form>
+    </div>
+           <div class="Testimonials">
+        </div>
+
+         <button  id="btn" style="margin-bottom: 3%; margin-top: 10px;">Submit Your Quote Request</button>
+</div>
+
+    <div class="Number">
+        <div style="color: rgb(255, 174, 0);">Talk To Us Now</div>
+        <div>+2348037905770</div>
+    </div>
+
+    <div class="lower-section">
+        <div class="logo1">
+            <img src="TWfinale_114458_1-W76IhcniB-transformed-400x175.png">
+        </div>
+        <div class="lower-button">
+            <button class="readMoreBtn" data-page="contact.html">Chat With Us</button>
+            <a href="contact.html">
+                 <button class="bookBtn">Book An Appointment</button>
+             </a>
+        </div>
+    </div>
+
+   <div class="footer">
+        <div class="footer-list">
+             <div>
+                  <a href="index.html" rel="noopener noreferrer" style="color: rgb(255, 174, 0)"><p>Home</p></a>
+             </div>
+         <div>
+              <a href="Testimonials.html" rel="noopener noreferrer"><p>Testimonials</p></a>
+         </div>
+          <div >About Us-Trusted Laundromart-Truewash laundromart, Akoka Lagos</div>
+              
+          <a href="news.html">
+                <div>News</div>
+              </a>
+
+              <a href="FAQS.html" rel="noopener noreferrer"> 
+                <div>FAQs</div>
+            </a>
+
+                <a href="safety.html" rel="noopener noreferrer">
+                    <div>Safety Policy</div>
+                </a>
+                 
+                <a href="privacy.html" rel="noopener noreferrer">
+                     <div>Privacy Policy</div>
+                </a>
+                    <a href="contact.html" rel="noopener noreferrer">
+                           <div>Contact Us</div>
+                    </a>
+
+                   <div>Like us on Facebook</div>
+                     <div> Follow Us On Instagram</div>
+
+        </div>
+
+        <div class="footer-right">
+            @Copyright 2025| Truewash Greenpathsdev| All Rights Reserved
+        </div>
+        
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll(".reveal");
+        cards.forEach( reveal => {
+            reveal.addEventListener("mouseenter", () =>{
+                reveal.classList.add("revealed");
+            });
+        });
+
+        const slides = 
+        document.querySelectorAll(".slide");
+
+        let index = 0;
+
+        setInterval(() => {
+            slides[index].classList.remove("active");
+                index = (index + 1) %
+                slides.length;
+
+                slides[index].classList.add("active");
+        }, 4000);
+
+
+            let name = document.getElementById('name');
+             let surName = document.getElementById('surName');
+             let email = document.getElementById('email');
+              let num = document.getElementById('num');
+               let msg = document.getElementById('msg');
+                let btn = document.getElementById('btn');
+                let form = document.querySelector('form');
+                let outPutMsg = document.getElementById("outPutMsg");
+
+                btn.addEventListener("click", 
+                    function  (e) {
+                        e.preventDefault();
+                        let emailPat = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                        if (name.value === ""|| email.value ===""|| num.value ===""|| surName.value === "") {
+                            outPutMsg.textContent = "Error: All fields are required";
+                            outPutMsg.style.color = "red";
+                        } else if (! email.value.match(emailPat)) {
+                            outPutMsg.textContent = "Invalid Email!";
+                            outPutMsg.style.color ="red";                            
+                        }
+                        else if (msg.value === "") {
+                            outPutMsg.textContent ="No Response Filed"
+                            outPutMsg.style.color = 'purple';
+                            
+                        }
+                        else {
+                            outPutMsg.textContent = `Thank You ${name.value} ${surName.value}! for your feedback`;
+                            outPutMsg.style.color="green";
+                        }
+                        
+                    }
+                );
+
+
+
+        document.querySelectorAll(".readMoreBtn").forEach(
+            btn => {
+                btn.addEventListener( "click",
+                    () =>{
+                        window.location.href = btn.getAttribute("data-page");
+                    } );
+            }
+        );
+
+    </script>
+
+</body>
+
+
+
+</html>
